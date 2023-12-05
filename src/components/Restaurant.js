@@ -8,7 +8,7 @@ function Restaurant() {
 
   // function call API
   const fetchData = async () => {
-    const result = await fetch('/restaurant.json')
+    const result = await fetch('/restaurants.json')
     result.json().then(
       data => {
         setRestaurant(data.restaurants)
