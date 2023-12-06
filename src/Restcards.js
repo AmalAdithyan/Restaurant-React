@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import './Restcard.css'
 
 function Restcards({ restdata }) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', marginBottom: '10px' }}>
+    <div id='cal1' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', marginBottom: '10px' }}>
       <Link to={`/view-restaurant/${restdata.id}`} style={{ textDecoration: 'none', color: 'white' }}>
         <Card style={{ width: '18rem', textAlign: 'center' }}>
           <Card.Img variant="top" src={restdata.photograph} />

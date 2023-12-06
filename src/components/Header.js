@@ -9,7 +9,7 @@ function Header() {
         
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/" id='cal'>
             <img
               alt=""
               src="https://i.postimg.cc/Ls449TbQ/kisspng-kfc-fried-chicken-restaurant-logo-clip-art-kfc-portugal-1-5-5-seedroid-5b6aca92e8e936-373635.png"
@@ -17,7 +17,7 @@ function Header() {
               height="50"
               className="d-inline-block align-top"
             />{' '}
-            <strong>KFC</strong>
+            <strong>Fine Dine Restaurants</strong>
           </Navbar.Brand>
         </Container>
       </Navbar>
