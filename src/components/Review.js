@@ -1,41 +1,48 @@
-import { React, useState } from 'react';
+import React from 'react'
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
 
-function Review({reviewData}) {
+
+function Reviews({reviewData}) {
+
     const [open, setOpen] = useState(false);
 
-    return (
-        <div>
-            <Button
-                onClick={() => setOpen(!open)}
-                aria-controls="example-collapse-text"
-                aria-expanded={open}
-                variant='warning'
-            >
-                Reviews
-            </Button>
-            <div style={{ minHeight: '150px' }}>
-                <Collapse in={open} dimension="width">
-                    <div id="example-collapse-text">
-                        {
-                            reviewData.map(item => (
+  return (
+    <>
+    
+    <Button 
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+        className='rounded m-2 border '
+        variant='success'
+        id='popefect'
+      >
+        Reviews
+      </Button>
+      
+        <Collapse in={open} >
+          <div id="example-collapse-text" className='border rounded'>
+            {
+                reviewData.map(item=>(
 
-                                <Card style={{ width: '400px' }}>
+                <Card body style={{ width: '100%' }} className='bg-dark text-white rounded'>
+                    <h4 className='overflow-hidden'>{item.name} | {item.date}</h4>
+                    <h5 className='text-warning overflow-hidden '>Rating : {item.rating}</h5>
+                    <p>Comments : {item.comments}</p>
+                </Card>
 
-                                    <h6>{item.name} : {item.data}</h6>
-                                    <p>Rating | {item.rating}</p>
-                                    <p>Comments | {item.comments}</p>
-                                </Card>
-                            ))
+                ))
+            
+            }
+          </div>
+        </Collapse>
+     
 
-                        }
-                    </div>
-                </Collapse>
-            </div>
-        </div>
-    )
+    </>
+  )
 }
 
-export default Review
+export default Reviews

@@ -1,9 +1,9 @@
 /* Add this CSS to your stylesheets or inline style */
 
-#cal {
+#popefect {
   transition:  .5s ease-in-out;
 }
-#cal:hover{
+#popefect:hover{
     transform: scale(1.02);
 
 }
